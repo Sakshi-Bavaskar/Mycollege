@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>MY College</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&family=Roboto:ital,wght@1,900&family=Source+Code+Pro:ital,wght@1,300;1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* remove scroll bar and smooth scroll */
+        ::-webkit-scrollbar {
+            width: 0;
+        }
+
+        /* navbar */
+        header {
+            width: 100%;
+            padding: 7px 0;
+            background-color: white;
+            border: 4px black;
+            border-style: double;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            text-transform: uppercase;
+            height: 150px;
+        }
+
+        nav {
+            width: 1600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            /* color:black; */
+            /* font-size: 20px; */
+
+            /* background-color: black; */
+        }
+
+        .leftlink {
+            font-size: 15px;
+            font-weight: 300;
+            color: rgb(51, 51, 222);
+            padding: 20px;
+        }
+
+        .link:hover {
+
+            color: rgb(8, 8, 8);
+        }
+
+        .logo img {
+            width: 155px;
+            height: 130px;
+        }
+
+        nav .logo {
+            margin-left: 6px;
+            margin-right: 500px;
+        }
+
+        /* Homepage */
+        .home {
+            width: 100%;
+            min-height: 100vh;
+            background-image: url(./img/header.jpg);
+            background-size: cover;
+            /* background-position: center; */
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            position: relative;
+        }
+
+        .top {
+            width: 750px;
+            min-height: 100vh;
+            padding: 70px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+
+        }
+
+        .top h1 {
+            font-size: 50px;
+            text-align: right;
+            margin-bottom: 16px;
+            margin-right: 340px;
+
+        }
+
+        .top h2 {
+            font-size: 40px;
+            margin-right: 20px;
+            margin-bottom: 470px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+
+        /* about us page */
+        .about {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(222, 243, 253);
+            /* background-image: url(./img/11.jpg); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: black;
+            border: 2px black;
+            border-style: double;
+            padding: 100px;
+        }
+
+        .about .des {
+            margin-bottom: 68px;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 40;
+            text-align: center;
+            font-size: 18px;
+            line-height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        /* department */
+        .department {
+            width: 100%;
+            min-height: 100vh;
+            background-color: rgb(222, 243, 253);
+            border: 2px black;
+            border-style: double;
+            /* background-image:url(./img/11.jpg); */
+            background-size: cover;
+            color: black;
+            padding: 50px;
+            position: relative;
+
+        }
+
+        .department h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .department ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .department li {
+            margin-bottom: 20px;
+        }
+
+        .department h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .department p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* faculty */
+        .faculty {
+            width: 100%;
+            min-height: 50vh;
+            background-color: rgb(222, 243, 253);
+            border: 2px black;
+            border-style: double;
+            /* background-image:url(./img/11.jpg); */
+            background-size: cover;
+            color: black;
+            padding: 30px;
+            position: relative;
+        }
+
+        .faculty h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .faculty ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .faculty li {
+            margin-bottom: 20px;
+        }
+
+        .faculty h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .faculty p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+
+        /* research page */
+
+        .research {
+            width: 100%;
+            min-height: 100vh;
+            background-color: rgb(222, 243, 253);
+            border: 2px black;
+            border-style: double;
+            /* background-image:url(./img/11.jpg); */
+            background-size: cover;
+            color: black;
+            padding: 60px;
+            position: relative;
+        }
+
+        /* placement page */
+
+        .placement {
+            width: 100%;
+            min-height: 100vh;
+            background-color: rgb(222, 243, 253);
+            border: 2px black;
+            border-style: double;
+            /* background-image:url(./img/11.jpg); */
+            background-size: cover;
+            color: black;
+            padding: 60px;
+            position: relative;
+        }
+
+        table .t {
+            border: 1px solid;
+            font-size: 20px;
+            font-style: normal;
+            margin-top: 40px;
+        }
+
+        .contact {
+            width: 100%;
+            min-height: 100vh;
+            background-color: rgb(222, 243, 253);
+            border: 2px black;
+            border-style: double;
+            /* background-image:url(./img/11.jpg); */
+            background-size: cover;
+            color: rgb(28, 20, 20);
+            padding: 60px;
+            position: relative;
+        }
+
+        .sub-title {
+            font-size: 26px;
+            text-align: center;
+            font-weight: 300;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 60px;
+            gap: 4rem;
+        }
+
+        .input p {
+            font-size: 24px;
+            font-weight: lighter;
+            margin-bottom: 10px;
+        }
+
+        .first .mid .last {
+            display: flex;
+            align-items: center;
+            width: min-content;
+            gap: 10rem;
+        }
+
+        form .input {
+            width: 300px;
+        }
+
+        input,
+        .input-1 {
+            outline: none;
+            border: 1px solid #ffc901;
+            width: 300px;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .contactform {
+            /* margin-left: 100px; */
+            /* padding:94px 128px; */
+            /* background-color: rgb(217, 210, 210); */
+            font-weight: lighter;
+            font-family: Roboto Condensed, sans-serif;
+            flex-wrap: wrap;
+            margin: 0px 100px;
+        }
+
+        /* ..... */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style the input container */
+        .input-container {
+            display: flex;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        /* Style the form icons */
+        .icon {
+            padding: 10px;
+            background: dodgerblue;
+            color: white;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* Style the input fields */
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            outline: none;
+        }
+
+        .input-field:focus {
+            border: 2px solid dodgerblue;
+        }
+
+        /* Set a style for the submit button */
+        .btn {
+            background-color: dodgerblue;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .btn:hover {
+            opacity: 1;
+        }
+
+        .title p {
+            color: blue;
+            font-size: 40px;
+            padding: 10px;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            font-family: 'Roboto Condensed', sans-serif;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <a href="#home" class="logo">
+                <img src="./img/log.jpg" alt="">
+            </a>
+            <ul class="leftlink" type="none">
+                <li><a href="#about" class="link">
+                        About-us
+                    </a></li>
+            </ul>
+            <br>
+            <ul class="leftlink" type="none">
+                <li><a href="#department" class="link">
+                        Department</a></li>
+
+            </ul>
+            <br>
+            <ul class="leftlink" type="none">
+                <li><a href="#faculty" class="link">
+                        Faculty
+                    </a></li>
+            </ul>
+            <br>
+
+
+            <ul class="leftlink" type="none">
+                <li><a href="#research" class="link">
+                        Research
+                    </a></li>
+            </ul>
+            <br>
+            <ul class="leftlink" type="none">
+                <li><a href="#placement" class="link">
+                        Placement
+                    </a></li>
+            </ul>
+            <ul class="leftlink" type="none">
+                <li><a href="#contact" class="link">
+                        Contact-Us
+                    </a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <!-- HomePage -->
+    
+    <hr>
+    <!-- about us page -->
+    <section class="about" id="about">
+
+        <div class="title">
+            <p> About my college</p>
+        </div>
+        <div class="i">
+            <img src="./img/im.png" height="250vh" width="100%" alt="">
+        </div>
+        <div>
+            <p class="des">
+                <marquee behavior="lighter" direction=""></marquee> Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Aperiam veniam consequatur doloremque
+                in quis labore doloribus reprehenderit veritatis necessitatibus, velit, earum ex sint quaerat? Inventore
+                nisi ipsum dolor sit amet consectetur adipisicing elit. Aperiam veniam consequatur doloremque
+                in quis alias a porro corporis!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam veniam consequatur doloremque
+                in quis labore doloribus reprehenderit veritatis necessitatibus, velit, earum ex sint quaerat? Inventore
+                nisi ipsum dolor sit amet consectetur adipisicing elit. Aperiam veniam consequatur doloremque
+                in quis alias a porro corporis!
+            </p>
+
+        </div>
+
+    </section>
+    <!-- Departments -->
+    <section class="department" id="department">
+        <div class="title">
+            <p>Department </p>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <h3>Computer Science Engineering</h3>
+                    <p>The Computer Science Engineering department offers undergraduate and graduate programs in
+                        computer science, as well as research opportunities in areas such as artificial intelligence,
+                        computer networks, and software engineering.</p>
+                </li>
+                <li>
+                    <h3>Mechanical Engineering</h3>
+                    <p>The Mechanical Engineering department offers undergraduate and graduate programs in mechanical
+                        engineering, as well as research opportunities in areas such as robotics, materials science, and
+                        energy systems.</p>
+                </li>
+                <li>
+                    <h3>Electrical Engineering</h3>
+                    <p>The Electrical Engineering department offers undergraduate and graduate programs in electrical
+                        engineering, as well as research opportunities in areas such as power systems, control systems,
+                        and telecommunications.</p>
+                </li>
+                <li>
+                    <h3>Civil Engineering</h3>
+                    <p>The Civil Engineering department offers undergraduate and graduate programs in electrical
+                        engineering, as well as research opportunities in areas such as engineers conceive, design,
+                        build, supervise, operate, construct and maintain infrastructure projects and systems in the
+                        public and private sector, including roads, buildings, airports, tunnels, dams, bridges, and
+                        systems for water supply and sewage treatment.
+                </li>
+            </ul>
+
+        </div>
+    </section>
+    <hr>
+    <!-- faculty-->
+    <section class="faculty" id="faculty">
+        <div class="title">
+            <p>Faculty </p>
+        </div>
+
+        <ul>
+            <li>
+                <h3>John Doe</h3>
+                <p>Professor, Computer Science Engineering</p>
+                <p>Research interests: artificial intelligence, machine learning, natural language processing</p>
+            </li>
+            <li>
+                <h3>Jane Smith</h3>
+                <p>Associate Professor, Mechanical Engineering</p>
+                <p>Research interests: robotics, materials science, additive manufacturing</p>
+            </li>
+            <li>
+                <h3>Bob Johnson</h3>
+                <p>Assistant Professor, Electrical Engineering</p>
+                <p>Research interests: power systems, control systems, renewable energy</p>
+            </li>
+            <li>
+                <h3>Bob Johnson</h3>
+                <p>Assistant Professor, Civil Engineering</p>
+                <p>Research interests:design,
+                    build, supervise, operate, construct and maintain infrastructure projects </p>
+            </li>
+        </ul>
+
+    </section>
+    <hr>
+
+    <!-- research -->
+    <section class="research" id="research">
+        <div class="title">
+            <p>Research </p>
+        </div>
+
+        <p>Our engineering college has a strong focus on research and innovation. Our faculty members and students are
+            involved in cutting-edge research projects in a wide range of areas, including:</p>
+        <ul>
+            <li><a href="#artificial-intelligence">Artificial Intelligence</a></li>
+            <li><a href="#robotics">Robotics</a></li>
+            <li><a href="#energy-systems">Energy Systems</a></li>
+            <li><a href="#materials-science">Materials Science</a></li>
+        </ul>
+        <h3 id="artificial-intelligence">Artificial Intelligence</h3>
+        <p>The Artificial Intelligence research group focuses on developing intelligent systems and algorithms that can
+            reason, learn, and act autonomously.</p>
+        <ul>
+            <li>Machine learning</li>
+            <li>Natural language processing</li>
+            <li>Computer vision</li>
+        </ul>
+        <h3 id="robotics">Robotics</h3>
+        <p>The Robotics research group focuses on designing, developing, and controlling robotic systems for various
+            applications, including manufacturing, healthcare, and space exploration.</p>
+        <ul>
+            <li>Manipulation and grasping</li>
+            <li>Mobile robots</li>
+            <li>Human-robot interaction</li>
+        </ul>
+        <h3 id="energy-systems">Energy Systems</h3>
+        <p>The Energy Systems research group focuses on developing sustainable energy sources and systems, as well as
+            improving the efficiency and reliability of existing systems.</p>
+        <ul>
+            <li>Renewable energy</li>
+            <li>Smart grids</li>
+            <li>Energy storage</li>
+        </ul>
+        <h3 id="materials-science">Materials Science</h3>
+        <p>The Materials Science research group focuses on understanding the structure and properties of materials at
+            the atomic and molecular scale, and developing new materials with improved properties and functionalities.
+        </p>
+        <ul>
+            <li>Nanomaterials</li>
+            <li>Polymers</li>
+            <li>Metallic alloys</li>
+        </ul>
+    </section>
+    <hr>
+    <!-- Placement -->
+    <section class="placement" id="placement">
+        <div class="title">
+            <p>Placement</p>
+        </div>
+
+        <p>Our engineering college has an excellent track record in placing our graduates in top companies and
+            organizations. Our graduates are highly sought after for their technical knowledge, problem-solving skills,
+            and teamwork abilities. Some of the companies that have hired our graduates include:</p>
+        <ul>
+            <li>Microsoft</li>
+            <li>Google</li>
+            <li>Amazon</li>
+            <li>Apple</li>
+            <li>Intel</li>
+        </ul>
+        <p>Our placement team works closely with our students to provide them with career guidance and opportunities. We
+            also invite top companies to visit our campus for recruitment drives and job fairs. Our students have the
+            opportunity to participate in internships, co-op programs, and industry-sponsored projects, which provide
+            them with valuable hands-on experience and networking opportunities.</p>
+        <h3>Placement Statistics</h3>
+        <br>
+        <br>
+        <table border="1px solid ">
+            <tr class="t">
+                <td>Year</td>
+                <td>Number of Students Placed</td>
+                <td>Percentage of Placement</td>
+            </tr>
+            <tr class="t">
+                <td>2023</td>
+                <td>110</td>
+                <td>92%</td>
+            </tr>
+            <tr class="t">
+                <td>2022</td>
+                <td>120</td>
+                <td>95%</td>
+            </tr>
+            <tr class="t">
+                <td>2021</td>
+                <td>150</td>
+                <td>98%</td>
+            </tr>
+            <tr class="t">
+                <td>2020</td>
+                <td>120</td>
+                <td>95%</td>
+            </tr>
+            <tr class="t">
+                <td>2019</td>
+                <td>110</td>
+                <td>92%</td>
+            </tr>
+            <tr class="t">
+                <td>2018</td>
+                <td>100</td>
+                <td>90%</td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+    <!-- Contact Us -->
+    <section class="contact" id="contact">
+        <div class="title">
+            <p>Contact Us</p>
+        </div>
+        <div class="contactform">
+            <form>
+                <div class="mb-3">
+                    <p class="center">
+                        People can fill up the form and send us the problem
+                    </p>
+                    <br>
+                    <br>
+                    <label for="name" class="form-label">Name</label>
+                    <input type="name" class="form-control" id="name" aria-describedby="namelHelp"
+                        placeholder="Enter Your Name">
+                    <br>
+                    <label for="Email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="Email" aria-describedby="emailHelp"
+                        placeholder="Enter Your Email">
+                    <br>
+                    <label for="Phone" class="form-label">Phone</label>
+                    <input type="phone" class="form-control" id="Phone" placeholder="Enter your Phone">
+                    <br>
+                    <div id="emailHelp" class="form-text">
+                        >>> We'll contact as soon as Possible
+                        and never share your email & Phone with anyone else.
+                    </div>
+                    <br>
+                    <br>
+                    <div class="input">
+                        <p>
+                            message ?
+                        </p>
+                        <textarea name="my text" id="s" cols="30" rows="10"></textarea>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn" name="register-form">
+                        SUBMIT
+                    </button>
+            </form>
+            <br>
+            <br>
+            <p class="center">
+
+                sa12345@gmail.com
+            </p>
+            <br>
+            <br>
+            <p class="center">
+                Toll Free Number:+1800 200 300 400
+            </p>
+
+            <footer class="background">
+                <p class="text-footer">
+                    Copyright @-All rights are reserved
+                </p>
+            </footer>
+        </div>
+    </section>
+    <hr>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</script>
+
+</html>
